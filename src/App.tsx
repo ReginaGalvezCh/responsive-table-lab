@@ -53,7 +53,7 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className={`app-container ${activeView === 'dashboard' ? 'app-container-dashboard' : ''}`}>
+    <div className={`app-container ${activeView === 'dashboard' ? 'app-container-dashboard' : 'app-container-orders'}`}>
       <AppSidebar activeView={activeView} onNavigate={handleNavigate} />
 
       {activeView === 'dashboard' ? (

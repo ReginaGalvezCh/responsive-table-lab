@@ -14,8 +14,9 @@
 
 .app-main {
   flex: 1;
+  min-width: 0;
   background-color: #f6f5f1;
-  padding: 2rem;
+  padding: 2rem 1rem;
 }
 
 .sidebar-brand {
@@ -514,4 +515,80 @@ button.nav-item.active {
   height: 20px;
   font-size: 1rem;
   color: currentColor;
+}
+@media (max-width: 1000px) {
+  .app-container-orders .summary-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .app-container-orders {
+    flex-direction: column;
+  }
+
+  .app-container-orders .app-sidebar {
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .app-container-orders .sidebar-brand {
+    margin-bottom: 0.5rem;
+  }
+
+  .app-container-orders .sidebar-nav ul {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .app-container-orders .sidebar-nav li {
+    flex: 0 0 auto;
+  }
+
+  .app-container-orders button.nav-item {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .app-container-orders .app-main {
+    padding: 1rem;
+  }
+
+  .app-container-orders .summary-cards {
+    gap: 0.75rem;
+  }
+
+  .app-container-orders .summary-card {
+    min-width: 0;
+    padding: 1rem;
+  }
+
+  .app-container-orders .card-label {
+    font-size: 0.7rem;
+  }
+
+  .app-container-orders .toolbar-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .app-container-orders .search-box {
+    max-width: none;
+    min-width: 0;
+  }
+
+  .app-container-orders .filter-box {
+    min-width: 0;
+  }
+
+  .app-container-orders .status-select {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .app-container-orders .order-details-panel {
+    width: min(400px, 100vw);
+  }
 }
