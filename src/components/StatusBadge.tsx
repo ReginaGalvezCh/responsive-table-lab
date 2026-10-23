@@ -6,10 +6,10 @@ interface StatusBadgeProps {
 }
 
 const statusLabels: Record<OrderStatus, string> = {
-  pendiente: 'Pendiente',
-  en_proceso: 'En Proceso',
-  completado: 'Completado',
-  cancelado: 'Cancelado'
+  pending: 'Pending',
+  in_progress: 'In Progress',
+  completed: 'Completed',
+  canceled: 'Canceled'
 };
 
 export const StatusBadge: React.FC<StatusBadgeProps> = ({ status }) => {

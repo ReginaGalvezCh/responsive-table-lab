@@ -1,47 +1,27 @@
-# NexoOps - Consola de Operaciones de Campo
+# NexoOps - Field Operations Console
 
-NexoOps es una consola ficticia desarrollada con **React**, **TypeScript** y **Vite** para la gestión y monitoreo de operaciones de campo.
+NexoOps is a fictional field operations console built with **React**, **TypeScript**, and **Vite**. It uses synthetic work orders to demonstrate complex table data and responsive layout behavior.
 
-## Arquitectura del Proyecto
+## Project structure
 
-El proyecto sigue una estructura modular y limpia:
+- `src/types/`: TypeScript interfaces and types.
+- `src/data/`: Synthetic work orders.
+- `src/components/`: UI components for navigation, tables, status badges, and order details.
 
-- `src/types/`: Definiciones de interfaces y tipos TypeScript.
-- `src/data/`: Datos sintéticos e inicializadores.
-- `src/components/`: Componentes de interfaz de usuario (tabla, tarjetas, filtros y panel de detalle).
+## Views
 
-## Vista Principal
+- **Work Orders** lists 12 synthetic orders with search, status filtering, priority and status indicators, and a details panel.
+- **General Dashboard** summarizes order activity and shows the five most recently scheduled orders.
 
-La vista inicial incluye:
-- **12 órdenes de trabajo sintéticas** precargadas.
-- **Buscador en tiempo real** por término o código.
-- **Filtro por estado** de la orden (Pendiente, En Proceso, Completado, Cancelado).
-- **Panel lateral de detalle** al seleccionar una fila de la tabla.
+## Requirements
 
-## Requisitos del Sistema
+- Node.js v20.19+ or v22.12+
+- npm v10 or later
 
-- **Node.js** v22 o superior
-- **npm** v10 o superior
+## Run locally
 
-## Instalación y Uso
+1. Install dependencies: `npm install`
+2. Start the development server: `npm run dev`
+3. Build the app: `npm run build`
 
-1. Instalar dependencias:
-   ```bash
-   npm install
-   ```
-
-2. Iniciar servidor de desarrollo local:
-   ```bash
-   npm run dev
-   ```
-
-3. Compilar para producción:
-   ```bash
-   npm run build
-   ```
-
-## Estado del Proyecto (Baseline)
-
-Esta versión constituye un *baseline* inicial diseñado para reproducir un problema de desbordamiento horizontal en la tabla de datos cuando se visualiza en un viewport estrecho (el cual aún no ha sido corregido intencionalmente).
-
-*Nota: Todos los datos presentados son sintéticos. Los módulos y escenarios futuros se integrarán mediante arquitecturas independientes.*
+All names, locations, and work orders in this project are synthetic.
