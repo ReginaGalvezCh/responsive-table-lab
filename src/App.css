@@ -279,22 +279,22 @@
   white-space: nowrap;
 }
 
-.status-pendiente {
+.status-pending {
   background-color: #fff3e0;
   color: #e47761;
 }
 
-.status-en_proceso {
+.status-in_progress {
   background-color: #eef2ff;
   color: #4b58a6;
 }
 
-.status-completado {
+.status-completed {
   background-color: #e8f5e9;
   color: #2e7d32;
 }
 
-.status-cancelado {
+.status-canceled {
   background-color: #ffebee;
   color: #c62828;
 }
@@ -309,7 +309,7 @@
   color: #526872;
 }
 
-.priority-urgente {
+.priority-urgent {
   background-color: #fde8e8;
   color: #e47761;
   font-weight: 700;

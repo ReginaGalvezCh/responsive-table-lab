@@ -1,6 +1,6 @@
-export type OrderStatus = 'pendiente' | 'en_proceso' | 'completado' | 'cancelado';
+export type OrderStatus = 'pending' | 'in_progress' | 'completed' | 'canceled';
 
-export type OrderPriority = 'baja' | 'media' | 'alta' | 'urgente';
+export type OrderPriority = 'low' | 'medium' | 'high' | 'urgent';
 
 export interface FieldOrder {
   id: string;

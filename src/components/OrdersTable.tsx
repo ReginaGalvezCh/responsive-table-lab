@@ -8,10 +8,10 @@ interface OrdersTableProps {
 }
 
 const priorityLabels: Record<string, string> = {
-  baja: 'Baja',
-  media: 'Media',
-  alta: 'Alta',
-  urgente: 'Urgente'
+  low: 'Low',
+  medium: 'Medium',
+  high: 'High',
+  urgent: 'Urgent'
 };
 
 export const OrdersTable: React.FC<OrdersTableProps> = ({ orders, onSelect }) => {
@@ -19,21 +19,21 @@ export const OrdersTable: React.FC<OrdersTableProps> = ({ orders, onSelect }) =>
     <table className="orders-table">
       <thead>
         <tr>
-          <th scope="col">Código</th>
-          <th scope="col">Título de la Orden</th>
-          <th scope="col">Ubicación</th>
-          <th scope="col">Responsable</th>
-          <th scope="col">Prioridad</th>
-          <th scope="col">Estado</th>
-          <th scope="col">Fecha</th>
-          <th scope="col">Acción</th>
+          <th scope="col">Code</th>
+          <th scope="col">Order Title</th>
+          <th scope="col">Location</th>
+          <th scope="col">Assignee</th>
+          <th scope="col">Priority</th>
+          <th scope="col">Status</th>
+          <th scope="col">Date</th>
+          <th scope="col">Action</th>
         </tr>
       </thead>
       <tbody>
         {orders.length === 0 ? (
           <tr>
             <td colSpan={8} className="empty-message">
-              No se encontraron órdenes de trabajo con los criterios ingresados.
+              No work orders match the current search and filter.
             </td>
           </tr>
         ) : (
@@ -57,9 +57,9 @@ export const OrdersTable: React.FC<OrdersTableProps> = ({ orders, onSelect }) =>
                   type="button"
                   className="btn-action-detail"
                   onClick={() => onSelect(order)}
-                  aria-label={`Ver detalle de la orden ${order.code}`}
+                  aria-label={`View details for order ${order.code}`}
                 >
-                  Ver detalle
+                  View details
                 </button>
               </td>
             </tr>
