@@ -1,0 +1,171 @@
+.app-container-dashboard .app-sidebar {
+  flex: 0 0 240px;
+}
+
+.dashboard-main {
+  min-width: 0;
+  width: 100%;
+}
+
+.dashboard-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-metric {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  background: #fff;
+  border: 1px solid #e2e6e8;
+  border-top: 3px solid #4b58a6;
+  border-radius: 8px;
+}
+
+.dashboard-metric-label {
+  color: #526872;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.dashboard-metric-value {
+  color: #193a46;
+  font-size: 1.5rem;
+}
+
+.dashboard-panel {
+  min-width: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e2e6e8;
+  border-radius: 8px;
+}
+
+.dashboard-panel-heading {
+  padding: 1.25rem;
+  border-bottom: 1px solid #e2e6e8;
+}
+
+.dashboard-panel-heading h2 {
+  color: #193a46;
+  font-size: 1.125rem;
+}
+
+.dashboard-panel-heading p {
+  margin-top: 0.25rem;
+  color: #526872;
+  font-size: 0.875rem;
+}
+
+.dashboard-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.dashboard-table-scroll:focus-visible {
+  outline: 3px solid #4b58a6;
+  outline-offset: -3px;
+}
+
+.dashboard-table {
+  width: 100%;
+  min-width: 680px;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+  padding: 0.875rem 1rem;
+  border-bottom: 1px solid #e2e6e8;
+  vertical-align: middle;
+}
+
+.dashboard-table th {
+  background: #f6f5f1;
+  color: #526872;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.dashboard-table td:last-child {
+  white-space: nowrap;
+}
+
+.dashboard-order-title {
+  min-width: 280px;
+  max-width: 520px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+button.nav-item:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1000px) {
+  .dashboard-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .app-container-dashboard {
+    flex-direction: column;
+  }
+
+  .app-container-dashboard .app-sidebar {
+    flex: none;
+    width: 100%;
+    padding: 0.75rem 1rem;
+  }
+
+  .app-container-dashboard .sidebar-brand {
+    margin-bottom: 0.5rem;
+  }
+
+  .app-container-dashboard .sidebar-nav ul {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .app-container-dashboard .sidebar-nav li {
+    flex: 0 0 auto;
+  }
+
+  .app-container-dashboard button.nav-item {
+    width: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-main {
+    padding: 1rem;
+  }
+
+  .dashboard-metrics {
+    gap: 0.75rem;
+  }
+
+  .dashboard-metric {
+    padding: 1rem;
+  }
+
+  .dashboard-metric-label {
+    font-size: 0.7rem;
+  }
+
+  .app-container-dashboard .order-details-panel {
+    width: min(400px, 100vw);
+  }
+}
